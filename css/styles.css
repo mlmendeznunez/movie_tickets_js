@@ -3,15 +3,14 @@
 }
 
 body {
-
-  background-color: #FFFFF0;
+  background-color: #D0DFFA;
   margin: 0px;
   min-height: 100%;
   width: 100%;
 }
 
 img {
-  height:20%;
+  height:200px;
   width:20%;
 }
 
@@ -20,12 +19,11 @@ html {
   min-height: 100%;
   width: 100%;
 }
-
 * {
-  font-family: Lydian BT;
+  font: SF Hollywood Hills;
 }
-
 h1 {
+  font: SF Hollywood Hills, Georgia;
   font-size: 50px;
   text-shadow: 1px 1px 2px gray;
 }
