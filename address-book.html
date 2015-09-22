@@ -15,12 +15,12 @@
     <h2>NOW IN THEATRES</h2>
     <div>
       <row class="col-md-2.5">
-        <a id="movieLink" href="http://www.fandango.com/theirongiant:signatureedition_185605/movieoverview">Iron Giant (2015)</a>
-      </row>
-      <row class="col-md-2.5" href="http://www.fandango.com/sicario_181019/movieoverview">Sicario</a>
-
+        <img src="Beautybeastdisney.png" alt="Cinderella">
       </row>
       <row class="col-md-2.5">
+        <img src="avengers2.jpg" alt="Avengers">
+      </row>
+      <row class="col-md-2.5"> 
 
       </row>
       <row class="col-md-2.5">
@@ -32,17 +32,34 @@
         <h2>Looking to purchase tickets?</h2>
         <form id="new-ticket">
           <div class="form-group">
-          	<select name="select">
             	<label for="new-movie">Movie: </label>
+              <select name="select" id="new-movie">
+                <option value="cinderella">Cinderella</option>
+                <option value="avengers">Avengers</option>
+                <option value="thelegomovie">The Lego Movie</option>
+                <option value="beautyandthebeast">Beauty and the Beast</option>  
+                <option value="shanghai">Shanghai</option>
+                <option value="sicario">Sicario</option>
             </select>
           </div>
+
           <div class="form-group">
             <label for="new-time">Time:</label>
-            <input type="text" class="form-control" id="new-time">
+            <select name="select" id="new-time">
+              <option value="morning">9 a.m. - 12</option>
+              <option value="matinae">12 p.m. - 4:30 p.m.</option>
+              <option value="evening">4:30 p.m. - 1 a.m.</option>
+            </select>
           </div>
+
           <div class="form-group">
             <label for="new-age">Your Age:</label>
-            <input type="text" class="form-control" id="new-age">
+            <select name="select" id="new-age">
+              <option value="infant">Infants (under 3)</option>
+              <option value="student">Students (under 18)</option>
+              <option value="adult">Adult</option>
+              <option value="senior">Senior Citizen (60+)</option>
+            </select>
           </div>
         </form>
 
