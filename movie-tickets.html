@@ -28,43 +28,53 @@
       </row>
     </div>
 
+    <!--Finds showtimes for a movie-->
+    <h2>SHOWTIMES: <span class="showTimes"></span></h2>
+      <h2 id="selected-movie"></h2>
+      <div class="form-group">
+        <select name="select" id="select-movie">
+        <option id="showtimes"> <option>
+        </select>
+      <div>
+      <ul id="showtimes"></ul>
 
-        <h2 id="purchase"> Looking to purchase tickets? </h2>
-        <form id="new-ticket">
-          <div class="form-group">
-            	<label for="new-movie">Movie: </label>
-              <select name="select" id="new-movie">
-                <option value="cinderella">Cinderella</option>
-                <option value="avengers">Avengers</option>
-                <option value="thelegomovie">The Lego Movie</option>
-                <option value="beautyandthebeast">Beauty and the Beast</option>  
-                <option value="shanghai">Shanghai</option>
-                <option value="sicario">Sicario</option>
-            </select>
-          </div>
 
-          <div class="form-group">
-            <label for="new-time">Time:</label>
-            <select name="select" id="new-time">
-              <option value="morning">9 a.m. - 12</option>
-              <option value="matinae">12 p.m. - 4:30 p.m.</option>
-              <option value="evening">4:30 p.m. - 1 a.m.</option>
-            </select>
-          </div>
+    <h2 id="purchase"> Looking to purchase tickets? </h2>
+      <form id="new-ticket">
+        <div class="form-group">
+          	<label for="new-movie">Movie: </label>
+            <select name="select" id="new-movie">
+              <option value="cinderella"></option>
+              <option value="avengers">Avengers</option>
+              <option value="thelegomovie">The Lego Movie</option>
+              <option value="beautyandthebeast">Beauty and the Beast</option>  
+              <option value="shanghai">Shanghai</option>
+              <option value="sicario">Sicario</option>
+          </select>
+        </div>
 
-          <div class="form-group">
-            <label for="new-age">Your Age:</label>
-            <select name="select" id="new-age">
-              <option value="infant">Infants (under 3)</option>
-              <option value="student">Students (under 18)</option>
-              <option value="adult">Adult</option>
-              <option value="senior">Senior Citizen (60+)</option>
-            </select>
-          </div>
-        </form>
+        <div class="form-group">
+          <label for="new-time">Time:</label>
+          <select name="select" id="new-time">
+            <option value="none"> </option>
+            <option value="matinee">9 a.m. - 4:30 p.m.</option>
+            <option value="evening">4:30 p.m. - 1 a.m.</option>
+          </select>
+        </div>
 
-          <span class="btn btn-default" id="add-ticket">Another ticket</span>
-          <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="form-group">
+          <label for="new-age">Your Age:</label>
+          <select name="select" id="new-age">
+            <option value="infant">Infants (under 3)</option>
+            <option value="student">Students (under 18)</option>
+            <option value="adult">Adult</option>
+            <option value="senior">Senior Citizen (60+)</option>
+          </select>
+        </div>
+      </form>
+
+        <span class="btn btn-default" id="add-ticket">Another ticket</span>
+        <button type="submit" class="btn btn-primary">Submit</button>
 
 
         <h2>Your ticket prices:</h2>

@@ -1,185 +1,93 @@
-function Ticket(newMovie, newTime,newAge){
-  this.newMovie = newMovie;
-  this.newTime = newTime;
-  this.newAge = newAge;
+/*
+ * JAVASCRIPT
+ */
+
+var movies = [];
+var tickets = [];
+
+function Movie(movie, showTimes){
+  this.name = name;
+  this.showTimes = showTimes;
+  movies.push(this);
+}
+
+var movie1 = new Movie("Cinderella", ["10:30 AM", " 1:15 PM", " 3:00 PM", " 7:30 PM"]);
+var movie2 = new Movie("Nemo", ["11:30 AM", " 3:15 PM", " 8:00 PM", " 12 AM"]);
+var movie3 = new Movie("Monsters Inc.", ["9:30 AM", " 2:45 PM", " 5:00 PM", " 6:00 PM"]);
+
+
+function Ticket( movie, time, age) {
+  this.movie = movie;
+  this.time = time;
+  this.age = age;
   // this.addresses = [];
 }
 
 Ticket.prototype.ticketInfo = function() {
-<<<<<<< HEAD
 
-  return this.newMovie + ", " + this.newTime + ", " + this.newAge;
+  return this.movie + ", " + this.time + ", " + this.age;
 }
 
-function calculateTicket(newMovie,newTime,newAge) {
-  var ticketPrice = 10;
-  if(newAge === infant) {
-    ticketPrice = 0;
-  }else if( newAge === student  && newAge === senior) {
-    ticketPrice = ticketPrice - 2;
-  } else
-  return ticketPrice;
-}
-=======
-  return this.newMovie + ", " + this.newTime + ", " + this.newAge;
-}
+function calculateTicket( movie, time, age) {
+  if (isMatinee)
+    return 5; 
+  } else {
+    if (infant){
+      return 0; 
+    } else if (student || senior){
+      return 7;
+    } else {
+      return 10;
+    }
+  }
 
-// function Address(street,city,state) {
-//   this.street = street;
-//   this.city = city;
-//   this.state = state;
-// }
-// Address.prototype.fullAddress = function() {
-//   return this.street + ", " + this.city + ", " + this.state;
-// }
-
->>>>>>> 1ac2d651c6d22443ab3840c8d04bd3f100e00d05
+var isMatinee = function(time){
+  if (time === matinee) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 function resetFields() {
-  $("input#new-movie").val("");
-  $("input#new-time").val("");
-  $("input.new-age").val("");
-<<<<<<< HEAD
+  $("#new-movie").val("");
+  $("#new-time").val("");
+  $(".new-age").val("");
 }
 
 $(document).ready(function() {
-  debugger;
+  //debugger;
 
-  /* Form to obtain content for new ticket sale */
+$("form#select-movie").submit(function(event) {
+    event.preventDefault();
+    $(option#showtimes).append("<span class='movie'>" + movie.name + "</span>");
+    var inputtedMovie = $("#movie").val(" ");
+  }
+
+  $("ul#showtimes").append("<span class='location'>" + movie.showTimes + "</span>"); //.text(movie.showTimes)
+
+
+  // var infant = 0; 
+  // var student = 0; 
+  // var adult = 0;
+  // var senior = 0; 
+
+  /* Form to obtain input for ticket price query */
   $("form#new-ticket").submit(function(event) {
     event.preventDefault();
 
-    var inputtedMovieName = $("#new-movie").val();
-
+    var inputtedMovie = $("#new-movie").val(); //val(" ")
     var inputtedTime = $("#new-time").val();
     var inputtedAge = $("#new-age").val();
-    var newTicket = new Ticket(inputtedMovieName, inputtedTime, inputtedAge);
 
-    /*Routing new contact information to web site*/
-    $("ul#tickets").append("<li><span class='ticket'>" + newTicket.ticketInfo + "</span></li>");
+    var newTicket = new Ticket(inputtedMovie, inputtedTime, inputtedAge);
+  });
 
-
-    /* Show information for the movie ticket that is clicked */
-    //$(".tickets").last().click(function() {
-      $("#show-tickets").show();
-=======
-
-}
-
-// function resetAddresses(){
-//   $("div.new-address").not("div.new-address:nth-child(1)").remove();
-//   //use class new-address, all additional classes will be deleted
-// }
-
-// function formAddress() {
-//   $(".new-address").append('<div class="new-address">' +
-//   '<div class="form-group">' +
-//   '<label for="new-street">Street</label>'+
-//   '<input type="text" class="form-control new-street">' +
-//   '</div>' +
-//   '<div class="form-group">' +
-//   '<label for="new-city">City</label>' +
-//   '<input type="text" class="form-control new-city">' +
-//   '</div>' +
-//   '<div class="form-group">' +
-//   '<label for="new-state">State</label>' +
-//   '<input type="text" class="form-control new-state">' +
-//   '</div>' +
-//   '</div>');
-// }
-
-$(document).ready(function() {
-
-  /* Form to add an additional address to a contact */
-  // $("#add-address").click(function() {
-  //   var addAdditionalAddress = new formAddress();
-  //
-  // });
-
-  /* Form to add a contact */
-  $("form#new-ticket").submit(function(event) {
-    event.preventDefault();
-
-    var inputtedMovieName = $("input#new-movie").val();
-    var inputtedTime = $("input#new-time").val();
-    var inputtedAge = $("input#new-age").val();
-    // var newContact = { firstName: inputtedMovieName, lastName: inputtedLastName, addresses: [] };
-    var newTicket = new Ticket(inputtedMovieName, inputtedTime,inputtedAge);
-
-    /* Add a contact's address */
-  // $(".new-address").each(function() {
-  //   var inputtedStreet = $(this).find("input.new-street").val();
-  //   var inputtedCity = $(this).find("input.new-city").val();
-  //   var inputtedState = $(this).find("input.new-state").val();
-  //   //var newAddress = { street: inputtedStreet, city: inputtedCity, state: inputtedState };
-  //   var newAddress = new Address( inputtedStreet, inputtedCity, inputtedState);
-  //   newContact.addresses.push(newAddress);
-  //
-  // });
-
-  /* Hidden form to add a second address or update information */
-  // $(".second-address").each(function() {
-  //   var inputtedStreet = $(this).find("input.new-street").val();
-  //   var inputtedCity = $(this).find("input.new-city").val();
-  //   var inputtedState = $(this).find("input.new-state").val();
-  //   // var secondAddress = { street: inputtedStreet, city: inputtedCity, state: inputtedState };
-  //   var secondAddress = new Address(inputtedStreet, inputtedCity, inputtedState);
-  //   newContact.addresses.push(secondAddress);
-  // });
-
-    /*Routing new contact information to web site*/
-    $("ul#tickets").append("<li><span class='ticket'>" + newTicket.ticketInfo() + "</span></li>");
-
-
-    /* Show information for the contact that is clicked */
-    $(".ticket").last().click(function() {
-      $("#show-ticket").show();
->>>>>>> 1ac2d651c6d22443ab3840c8d04bd3f100e00d05
-      // $("#show-ticket h2").text(newTicket.firstName);
-      $(".movie-name").text(newTicket.movie-name);
-      $(".movie-time").text(newTicket.movie-time);
-      $(".age").text(newTicket.age);
-
-<<<<<<< HEAD
-
-      // $("ul#addresses").text("");
-      // newContact.addresses.forEach(function(address) {
-      //   $("ul#addresses").append("<li>" + address.street + ", " + address.city + ", " +       address.state + "</li>");
-      // });
-    //});
-=======
-      // $("ul#addresses").text("");
-      // newContact.addresses.forEach(function(address) {
-      //   $("ul#addresses").append("<li>" + address.street + ", " + address.city + ", " +       address.state + "</li>");
-      });
-    });
-
-
-    $( "p" )
-      .on( "mouseenter", function() {
-        $( this ).css({
-          "background-color": "yellow",
-          "font-weight": "bolder"
-        });
-      })
-      .on( "mouseleave", function() {
-        var styles = {
-          backgroundColor : "#ddd",
-          fontWeight: ""
-        };
-        $( this ).css( styles );
-      });
-
-
->>>>>>> 1ac2d651c6d22443ab3840c8d04bd3f100e00d05
+  /*Routing ticket prices to the web site*/
+  $("ul#tickets").append("<li><span class='ticket'>" + newTicket.ticketInfo + "</span></li>");
 
     // var deleteAdditionalAddresses = new resetAddresses();
     var clear = new resetFields();
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 1ac2d651c6d22443ab3840c8d04bd3f100e00d05
   });//closes form new-contact
 });
